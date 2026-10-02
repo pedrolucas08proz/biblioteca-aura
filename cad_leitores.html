@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="acessibilidade">
+        <span>Acessibilidade: </span>
+        <button onclick="aumentarFonte()">A+ (Aumentar Letra)</button>
+        <button onclick="diminuirFonte()">A- (Diminuir Letra)</button>
+        <button onclick="mudarContraste()">Alto Contraste</button>
+    </div>
+
+    <header>
+        <h1>Biblioteca</h1>
+        <p>Leitura, inclusão e audiobooks ao alcance de todos!</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="cad_leitores.html">Leitores</a>
+        <a href="biblioteca.html">Biblioteca de Livros</a>
+        <a href="cad_livros.html">Cadastrar Livros</a>
+    </nav>
+
+    <main>
+        <div class="formulario">
+            <h2>Cadastro de Leitores</h2>
+
+            <form onsubmit="cadastrar(event)">
+                <label>Nome:</label>
+                <input type="text" placeholder="Digite o nome" required>
+
+                <label>CPF:</label>
+                <input type="text" placeholder="Digite o CPF" required>
+
+                <label>Telefone:</label>
+                <input type="text" placeholder="Digite o telefone">
+
+                <label>E-mail:</label>
+                <input type="email" placeholder="Digite o e-mail">
+
+                <label>Endereço:</label>
+                <input type="text" placeholder="Digite o endereço">
+
+                <label><strong>Precisa de suporte de áudio (Audiobook)?</strong></label>
+                <select id="suporteAudio" onchange="verificarAudio()">
+                    <option value="nao">Não preciso (Leitura comum)</option>
+                    <option value="sim">Sim, preciso de suporte de áudio (Audiobook)</option>
+                </select>
+
+                <button type="button" class="botao-audio">
+                    🔊 Ouvir explicação sobre o Audiobook
+                </button>
+
+                <div class="botoes-form">
+                    <button type="submit" class="botao">Cadastrar</button>
+                    <button type="reset" class="botao-limpar">Limpar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>©</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
